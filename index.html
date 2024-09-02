@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
   
-  <link rel="shortcut icon" href="./static/images/ovis/jhu_web.png" />
+  <link rel="shortcut icon" href="./static/images/jhu_web.png" />
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -40,9 +40,87 @@
   <script src="./static/js/index.js"></script>
 
 </head>
+<style>
+    body {
+        font-family: 'Google Sans', sans-serif;
+    }
+    .top-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem; /* Reduced padding */
+        background-color: #ffffff;
+    }
+    .nav-center {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Reduced gap */
+    }
+    .home-icon {
+        font-size: 1.3rem; /* Slightly reduced size */
+        color: #4a4a4a;
+        text-decoration: none;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .publication-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 1rem; /* Reduced top margin */
+        margin-bottom: 1rem;
+    }
+    .publication-authors {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .author-block {
+        display: inline-block;
+        margin-right: 10px;
+    }
+</style>
 
 <body>
 
+   <nav class="top-nav">
+    <div class="nav-center">
+        <a href="#" class="home-icon">🏠</a>
+        <div class="dropdown">
+            <span>More Research ▼</span>
+            <div class="dropdown-content">
+                <a href="#">Project 1</a>
+                <a href="#">Project 2</a>
+                <a href="#">Project 3</a>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <section class="hero">
   <div class="hero-body">
@@ -95,7 +173,7 @@
                 <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/VS_Mask-Free_OVIS_Open-Vocabulary_Instance_Segmentation_Without_Manual_Mask_Annotations_CVPR_2023_paper.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <img src="./static/images/pdf.svg" alt="PDF icon" width="32" height="32">
                   </span>
                   <span>Paper</span>
                 </a>
@@ -104,7 +182,7 @@
                 <a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/VS_Mask-Free_OVIS_Open-Vocabulary_CVPR_2023_supplemental.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <img src="./static/images/pdf.svg" alt="PDF icon" width="32" height="32">
                   </span>
                   <span>Supplementary material</span>
                 </a>
@@ -113,8 +191,7 @@
                 <a href="https://github.com/Vibashan/Mask-free-OVIS"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <!--  <i class="ai ai-arxiv"></i> -->
-                     <i class="fab fa-github"></i> 
+                     <img src="./static/images/github.svg" alt="GitHub icon" width="32" height="32">
                   </span>
                   <span>Github</span>
                 </a>
@@ -123,7 +200,7 @@
                 <a href="https://docs.google.com/presentation/d/1VDJkCr5duzretJegbohLiRn0PBRsry3T/edit?usp=sharing&ouid=115004586392986149446&rtpof=true&sd=true"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <span>Supplementary material</span>
                   </span>
                   <span>Slides</span>
                 </a>
